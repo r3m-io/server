@@ -1,6 +1,6 @@
 <?php
 
-namespace Package\R3m\Io\Log\Controller;
+namespace Package\R3m\Io\Server\Controller;
 
 use R3m\Io\App;
 use R3m\Io\Config;
@@ -22,9 +22,8 @@ class Cli extends Controller {
     const DIR = __DIR__ . '/';
     const MODULE_INFO = 'Info';
     const INFO = [
-        '{{binary()}} r3m_io/log                     | log options',
-        '{{binary()}} r3m_io/log setup               | Log setup',
-        '{{binary()}} r3m_io/log archive <archive>   | Zip <archive> into <archive>.{literal}{date(\'Y-m-d H:i:s\')}{/literal}.log.zip',
+        '{{binary()}} r3m_io/server                  | Server options',
+        '{{binary()}} r3m_io/server setup            | Server setup',
     ];
 
     /**
