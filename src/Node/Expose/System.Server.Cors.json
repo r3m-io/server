@@ -1,0 +1,208 @@
+{
+    "System": {
+        "Server": {
+            "Cors": {
+                "count": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "page": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "list": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "read": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "record": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "create": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "put": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "patch": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "header",
+                                "domain",
+                                "allow_credential",
+                                "max-age",
+                                "method"
+                            ],
+                            "object": {
+                                "header": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "expose",
+                                        "allow"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

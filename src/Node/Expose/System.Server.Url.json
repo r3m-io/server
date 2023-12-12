@@ -1,0 +1,216 @@
+{
+    "System": {
+        "Server": {
+            "Url": {
+                "count": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "list": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "page": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "read": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "record": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "create": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "put": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "patch": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
