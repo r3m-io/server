@@ -158,6 +158,32 @@
                         }
                     ]
                 },
+                "create_many": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
                 "put": {
                     "expose": [
                         {
@@ -184,7 +210,59 @@
                         }
                     ]
                 },
+                "put_many": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
                 "patch": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "name",
+                                "options"
+                            ],
+                            "object": {
+                                "options": {
+                                    "multiple": false,
+                                    "expose": [
+                                        "development",
+                                        "staging",
+                                        "production",
+                                        "test",
+                                        "replica"
+                                    ]
+                                }
+                            }
+
+                        }
+                    ]
+                },
+                "patch_many": {
                     "expose": [
                         {
                             "role": "ROLE_SYSTEM",
