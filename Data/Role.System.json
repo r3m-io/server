@@ -137,27 +137,22 @@
     },
     {
       "name": "System:Server:Cors:page",
-      "attribute": [],
       "#class": "Account.Permission"
     },
     {
       "name": "System:Server:Cors:page.relation",
-      "attribute": [],
       "#class": "Account.Permission"
     },
     {
       "name": "System:Server:Cors:list",
-      "attribute": [],
       "#class": "Account.Permission"
     },
     {
       "name": "System:Server:Cors:list.relation",
-      "attribute": [],
       "#class": "Account.Permission"
     },
     {
       "name": "System:Server:Cors:rename",
-      "attribute": [],
       "#class": "Account.Permission"
     },
     {
