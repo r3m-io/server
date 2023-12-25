@@ -68,6 +68,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Server:property.delete",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Server:list",
       "#class": "Account.Permission"
     },
@@ -137,6 +141,10 @@
     },
     {
       "name": "System:Server:Cors:page",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Server:Cors:property.delete",
       "#class": "Account.Permission"
     },
     {
@@ -217,6 +225,10 @@
     },
     {
       "name": "System:Server:Url:page.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Server:Url:property.delete",
       "#class": "Account.Permission"
     },
     {
