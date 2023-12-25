@@ -14,7 +14,10 @@ trait Import {
     public function role_system(): void
     {
         $object = $this->object();
-        $node = new Node($object);
-        $node->role_system_create('r3m_io/server');
+        $package = $object->request('package');
+        if($package){
+            $node = new Node($object);
+            $node->role_system_create($package);
+        }
     }
 }
