@@ -45,18 +45,25 @@ trait Server {
         if(strstr($options['public'], '/') === false){
             $options['public'] = $object->config('project.dir.root') . $options['public'] . $object->config('ds');
         }
-        $source = $object->config('controller.dir.data') . 'Server' . $object->config('ds');
-        d($source);
         $destination = $options['public'];
         Dir::create($destination, Dir::CHMOD);
-        Dir::copy($source, $destination);
+        $source = $object->config('controller.dir.data') . '.htaccess';
+        $destination = $options['public'] . '.htaccess';
+        File::copy($source, $destination);
+        $source = $object->config('controller.dir.data') . '.user.ini';
+        $destination = $options['public'] . '.user.ini';
+        File::copy($source, $destination);
+        $source = $object->config('controller.dir.data') . 'index.php';
+        $destination = $options['public'] . 'index.php';
+        File::copy($source, $destination);
+
         File::permission($object, [
-            'destination' => $destination,
-            '.htaccess' => $destination . '.htaccess',
-            '.user.ini' => $destination . '.user.ini',
-            'index.php' => $destination . 'index.php',
+            'public' => $options['public'],
+            '.htaccess' => $options['public'] . '.htaccess',
+            '.user.ini' => $options['public'] . '.user.ini', // <-- need parse
+            'index.php' => $options['public'] . 'index.php',
         ]);
-d($object->config('controller.dir.data'));
+        d($object->config('controller.dir.data'));
 //        d($object->config('project'));
         ddd($options);
         /*
