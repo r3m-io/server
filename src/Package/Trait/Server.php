@@ -10,6 +10,7 @@ use R3m\Io\Module\File;
 use Exception;
 
 use R3m\Io\Exception\ObjectException;
+use R3m\Io\Node\Model\Node;
 
 trait Server {
 
@@ -62,5 +63,12 @@ trait Server {
             '.user.ini' => $options['public'] . '.user.ini', // <-- need parse
             'index.php' => $options['public'] . 'index.php',
         ]);
+        $node = new Node($object);
+        $class = 'System.Server';
+        $response = $node->record($class, $node->role_system());
+        ddd($response);
+
+        //select server
+        //update server.public && server.public_directory
     }
 }
