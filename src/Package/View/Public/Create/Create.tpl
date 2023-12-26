@@ -1,2 +1,3 @@
 {{R3M}}
-public create
+{{$options = options()}}
+{{Package.R3m.Io.Server:Server:public.create($options)}}
