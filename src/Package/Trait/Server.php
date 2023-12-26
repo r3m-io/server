@@ -38,9 +38,13 @@ trait Server {
             throw $exception;
         }
         if(!array_key_exists('public', $options)){
-            $options['public'] = 'Public';
+            $options['public'] = $object->config('project.dir.public');
         }
-        d($object->config('project'));
+        if(strstr($options['public'], '/') === false){
+            $options['public'] = $object->config('project.dir.root') . $options['public'] . $object->config('ds');
+        }
+d($object->config('controller.dir.data'));
+//        d($object->config('project'));
         ddd($options);
         /*
         $package = $object->request('package');
