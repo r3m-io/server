@@ -63,15 +63,5 @@ trait Server {
             '.user.ini' => $options['public'] . '.user.ini', // <-- need parse
             'index.php' => $options['public'] . 'index.php',
         ]);
-        d($object->config('controller.dir.data'));
-//        d($object->config('project'));
-        ddd($options);
-        /*
-        $package = $object->request('package');
-        if($package){
-            $node = new Node($object);
-            $node->role_system_create($package);
-        }
-        */
     }
 }
