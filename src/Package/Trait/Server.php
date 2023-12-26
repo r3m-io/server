@@ -56,7 +56,6 @@ trait Server {
         $source = $object->config('controller.dir.data') . 'index.php';
         $destination = $options['public'] . 'index.php';
         File::copy($source, $destination);
-
         File::permission($object, [
             'public' => $options['public'],
             '.htaccess' => $options['public'] . '.htaccess',
