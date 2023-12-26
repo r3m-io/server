@@ -5,8 +5,13 @@ use R3m\Io\Module\Core;
 
 use Exception;
 
+use R3m\Io\Exception\ObjectException;
+
 trait Server {
 
+    /**
+     * @throws ObjectException
+     */
     public function public_create($options): void
     {
         $object = $this->object();
