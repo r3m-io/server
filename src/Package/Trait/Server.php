@@ -5,6 +5,7 @@ use R3m\Io\Config;
 use R3m\Io\Module\Core;
 use R3m\Io\Module\Dir;
 use R3m\Io\Module\Event;
+use R3m\Io\Module\File;
 
 use Exception;
 
