@@ -46,6 +46,7 @@ trait Server {
             $options['public'] = $object->config('project.dir.root') . $options['public'] . $object->config('ds');
         }
         $source = $object->config('controller.dir.data') . 'Server' . $object->config('ds');
+        d($source);
         $destination = $options['public'];
         Dir::create($destination, Dir::CHMOD);
         Dir::copy($source, $destination);
