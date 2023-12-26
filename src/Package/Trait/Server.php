@@ -7,10 +7,11 @@ use R3m\Io\Module\Dir;
 use R3m\Io\Module\Event;
 use R3m\Io\Module\File;
 
+use R3m\Io\Node\Model\Node;
+
 use Exception;
 
 use R3m\Io\Exception\ObjectException;
-use R3m\Io\Node\Model\Node;
 
 trait Server {
 
@@ -65,7 +66,11 @@ trait Server {
         ]);
         $node = new Node($object);
         $class = 'System.Server';
-        $response = $node->record($class, $node->role_system());
+        $response = $node->record($class, $node->role_system(), [
+            'filter' => [
+                '#class' => 'System.Server'
+            ],
+        ]);
         ddd($response);
 
         //select server
