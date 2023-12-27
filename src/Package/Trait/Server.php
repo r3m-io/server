@@ -56,7 +56,10 @@ trait Server {
         )) {
             return false;
         }
-        if(!array_key_exists('public', $options)){
+        if(
+            !array_key_exists('public', $options) ||
+            empty($options['public'])
+        ){
             $options['public'] = $object->config('project.dir.public');
         }
         if(strstr($options['public'], '/') === false){
