@@ -84,6 +84,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Server:public.create",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Server:Cors:import",
       "#class": "Account.Permission"
     },
