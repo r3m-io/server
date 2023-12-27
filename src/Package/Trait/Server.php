@@ -19,7 +19,7 @@ trait Server {
      * @throws ObjectException
      * @throws Exception
      */
-    public function public_create($options): void
+    public function public_create($options): mixed
     {
         $object = $this->object();
         $options = Core::object($options, Core::OBJECT_ARRAY);
@@ -123,6 +123,13 @@ trait Server {
             ){
                 echo 'Server public directory (' . $response['node']->public .') configured (patch)' . PHP_EOL;
                 return;
+            }
+            if(
+                $response &&
+                is_array($response) &&
+                array_key_exists('error', $response)
+            ){
+                return $response;
             }
         }
         throw new Exception('Server public directory (' . $options['public'] .') not configured...');
