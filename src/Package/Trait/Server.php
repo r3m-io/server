@@ -129,7 +129,7 @@ trait Server {
                 is_array($response) &&
                 array_key_exists('error', $response)
             ){
-                return Core::object($response, Core::OBJECT_JSON);
+                return Core::object($response, Core::OBJECT_JSON) . PHP_EOL;
             }
         }
         throw new Exception('Server public directory (' . $options['public'] .') not configured...');
