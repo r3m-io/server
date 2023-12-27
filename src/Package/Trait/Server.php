@@ -13,6 +13,7 @@ use R3m\Io\Node\Model\Node;
 use Exception;
 
 use R3m\Io\Exception\ObjectException;
+use R3m\Io\Node\Service\Security;
 
 trait Server {
 
@@ -36,11 +37,24 @@ trait Server {
             )
         ){
             $exception = new Exception('Only root and after that www-data can configure public create...');
-            Event::trigger($object, 'cli.configure.public.create', [
+            Event::trigger($object, 'r3m.io.server.public.create', [
                 'options' => $options,
                 'exception' => $exception
             ]);
             throw $exception;
+        }
+        $node = new Node($object);
+        $class = 'System.Server';
+        if (!array_key_exists('function', $options)) {
+            $options['function'] = __FUNCTION__;
+        }
+        $options['relation'] = false;
+        if (!Security::is_granted(
+            $class,
+            $node->role_system(),
+            $options
+        )) {
+            return false;
         }
         if(!array_key_exists('public', $options)){
             $options['public'] = $object->config('project.dir.public');
@@ -66,16 +80,14 @@ trait Server {
         File::permission($object, [
             'public' => $options['public'],
             '.htaccess' => $options['public'] . '.htaccess',
-            '.user.ini' => $options['public'] . '.user.ini', // <-- need parse
+            '.user.ini' => $options['public'] . '.user.ini',
             'index.php' => $options['public'] . 'index.php',
         ]);
-        $node = new Node($object);
-        $class = 'System.Server';
         $response = $node->record($class, $node->role_system());
         if(!$response){
             $record = (object) [
                 'public' => $options['public'],
-                '#class' => 'System.Server'
+                '#class' => $class
             ];
             $response = $node->create($class, $node->role_system(), $record);
             $config = $this->system_config($node);
@@ -95,6 +107,10 @@ trait Server {
                 Dir::is($response['node']->public)
             ){
                 echo 'Server public directory (' . $response['node']->public .') configured (create)' . PHP_EOL;
+                Event::trigger($object, 'r3m.io.server.public.create', [
+                    'options' => $options,
+                    'response' => $response
+                ]);
                 return null;
             }
         }
@@ -108,7 +124,7 @@ trait Server {
             $record = (object) [
                 'uuid' => $response['node']->uuid,
                 'public' => $options['public'],
-                '#class' => 'System.Server'
+                '#class' => $class
             ];
             if(
                 property_exists($response['node'], 'public') &&
@@ -135,6 +151,10 @@ trait Server {
                 Dir::is($response['node']->public)
             ){
                 echo 'Server public directory (' . $response['node']->public .') configured (patch)' . PHP_EOL;
+                Event::trigger($object, 'r3m.io.server.public.create', [
+                    'options' => $options,
+                    'response' => $response
+                ]);
                 return null;
             }
             if(
@@ -142,10 +162,20 @@ trait Server {
                 is_array($response) &&
                 array_key_exists('error', $response)
             ){
-                return Core::object($response, Core::OBJECT_JSON) . PHP_EOL;
+                $result = Core::object($response, Core::OBJECT_JSON) . PHP_EOL;
+                Event::trigger($object, 'r3m.io.server.public.create', [
+                    'options' => $options,
+                    'response' => $response
+                ]);
+                return $result;
             }
         }
-        throw new Exception('Server public directory (' . $options['public'] .') not configured...');
+        $exception = new Exception('Server public directory (' . $options['public'] .') not configured...');
+        Event::trigger($object, 'r3m.io.server.public.create', [
+            'options' => $options,
+            'exception' => $exception
+        ]);
+        throw $exception;
     }
 
     public function system_config($node): ?array
