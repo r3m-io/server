@@ -84,6 +84,19 @@ trait Server {
             property_exists($response['node'], 'uuid')
         ){
             $config = $node->record('System.Config', $node->role_system());
+            if(
+                $config &&
+                is_array($config) &&
+                array_key_exists('node', $config) &&
+                property_exists($config['node'], 'uuid') &&
+                !property_exists($config['node'], 'server')
+            ){
+                $patch = (object) [
+                    'uuid' => $config['node']->uuid,
+                    'server' => '*' //we have $response and can use the uuid too.
+                ];
+                $config = $node->patch('System.Config', $node->role_system(), $patch);
+            }
             d($config);
             ddd($response);
             //update system.server record
