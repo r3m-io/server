@@ -59,8 +59,7 @@ trait Server {
         $parse = new Parse($object);
         $read = File::read($destination);
         $read = $parse->compile($read, $object->data());
-        ddd($read);
-
+        File::write($destination, $read);
         $source = $object->config('controller.dir.data') . 'index.php';
         $destination = $options['public'] . 'index.php';
         File::copy($source, $destination);
