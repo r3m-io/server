@@ -23,9 +23,6 @@ trait Server {
      */
     public function public_create($options): ?string
     {
-
-        $size = File::size_calculation('1.5 G');
-        ddd($size);
         $object = $this->object();
         $options = Core::object($options, Core::OBJECT_ARRAY);
         $id = $object->config(Config::POSIX_ID);
