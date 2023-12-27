@@ -66,11 +66,7 @@ trait Server {
         ]);
         $node = new Node($object);
         $class = 'System.Server';
-        $response = $node->record($class, $node->role_system(), [
-            'filter' => [
-                '#class' => 'System.Server'
-            ],
-        ]);
+        $response = $node->record($class, $node->role_system());
         if(!$response){
             $record = (object) [
                 'public' => $options['public'],
@@ -87,7 +83,7 @@ trait Server {
             is_object($response['node']) &&
             property_exists($response['node'], 'uuid')
         ){
-            $config = $node->record('System.Config', $node->role_system(), []);
+            $config = $node->record('System.Config', $node->role_system());
             d($config);
             ddd($response);
             //update system.server record
