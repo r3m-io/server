@@ -19,7 +19,7 @@ trait Server {
      * @throws ObjectException
      * @throws Exception
      */
-    public function public_create($options): mixed
+    public function public_create($options): ?array
     {
         $object = $this->object();
         $options = Core::object($options, Core::OBJECT_ARRAY);
