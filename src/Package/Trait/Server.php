@@ -90,7 +90,7 @@ trait Server {
                 Dir::is($response['node']->public)
             ){
                 echo 'Server public directory (' . $response['node']->public .') configured (create)' . PHP_EOL;
-                return;
+                return null;
             }
         }
         elseif(
@@ -122,7 +122,7 @@ trait Server {
                 Dir::is($response['node']->public)
             ){
                 echo 'Server public directory (' . $response['node']->public .') configured (patch)' . PHP_EOL;
-                return;
+                return null;
             }
             if(
                 $response &&
@@ -135,7 +135,8 @@ trait Server {
         throw new Exception('Server public directory (' . $options['public'] .') not configured...');
     }
 
-    public function system_config($node){
+    public function system_config($node): ?array
+    {
         $config = $node->record('System.Config', $node->role_system());
         if(
             $config &&
@@ -150,6 +151,6 @@ trait Server {
             ];
             $config = $node->patch('System.Config', $node->role_system(), $patch);
         }
-        return$config;
+        return $config;
     }
 }
