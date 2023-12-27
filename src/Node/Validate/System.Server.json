@@ -17,11 +17,6 @@
                                 ]
                             }
                         }
-                    ],
-                    "?public": [
-                        {
-                            "string.not.contains": "/"
-                        }
                     ]
                 }
             },
@@ -41,11 +36,6 @@
                                 ]
                             }
                         }
-                    ],
-                    "?public": [
-                        {
-                            "string.not.contains": "/"
-                        }
                     ]
                 }
             },
@@ -64,11 +54,6 @@
                                     "#class"
                                 ]
                             }
-                        }
-                    ],
-                    "?public": [
-                        {
-                            "string.not.contains": "/"
                         }
                     ]
                 }

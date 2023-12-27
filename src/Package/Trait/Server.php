@@ -105,6 +105,14 @@ trait Server {
                 'public' => $options['public'],
                 '#class' => 'System.Server'
             ];
+            if(
+                property_exists($response['node'], 'public') &&
+                !empty($response['node']->public) &&
+                Dir::is($response['node']->public) &&
+                $record->public !== $response['node']->public
+            ){
+                Dir::remove($response['node']->public);
+            }
             $response = $node->patch($class, $node->role_system(), $record);
             if(
                 $config &&
