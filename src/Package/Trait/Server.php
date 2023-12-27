@@ -87,9 +87,7 @@ trait Server {
             is_object($response['node']) &&
             property_exists($response['node'], 'uuid')
         ){
-            $config = $node->record('System.Config', $node->role_system(), [
-                'relation' => false
-            ]);
+            $config = $node->record('System.Config', $node->role_system(), []);
             d($config);
             ddd($response);
             //update system.server record
