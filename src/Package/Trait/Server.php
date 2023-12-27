@@ -19,7 +19,7 @@ trait Server {
      * @throws ObjectException
      * @throws Exception
      */
-    public function public_create($options): ?array
+    public function public_create($options): ?string
     {
         $object = $this->object();
         $options = Core::object($options, Core::OBJECT_ARRAY);
@@ -129,7 +129,7 @@ trait Server {
                 is_array($response) &&
                 array_key_exists('error', $response)
             ){
-                return $response;
+                return Core::object($response, Core::OBJECT_JSON);
             }
         }
         throw new Exception('Server public directory (' . $options['public'] .') not configured...');
