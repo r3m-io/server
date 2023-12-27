@@ -71,6 +71,27 @@ trait Server {
                 '#class' => 'System.Server'
             ],
         ]);
+        if(!$response){
+            $record = (object) [
+                'public' => $options['public'],
+                '#class' => 'System.Server'
+            ];
+            $response = $node->create($class, $node->role_system(), $record);
+            ddd($response);
+            //create a system.server record
+            //add system.server to system.config (relation)
+        }
+        elseif(
+            is_array($response) &&
+            array_key_exists('node', $response) &&
+            is_object($response['node']) &&
+            property_exists($response['node'], 'uuid')
+        ){
+            ddd($response);
+            //update system.server record
+        }
+
+
         ddd($response);
 
         //select server
