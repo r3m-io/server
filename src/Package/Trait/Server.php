@@ -7,6 +7,7 @@ use R3m\Io\Module\Dir;
 use R3m\Io\Module\Event;
 use R3m\Io\Module\File;
 
+use R3m\Io\Module\Parse;
 use R3m\Io\Node\Model\Node;
 
 use Exception;
@@ -55,6 +56,11 @@ trait Server {
         $source = $object->config('controller.dir.data') . '.user.ini';
         $destination = $options['public'] . '.user.ini';
         File::copy($source, $destination);
+        $parse = new Parse($object);
+        $read = File::read($destination);
+        $read = $parse->compile($read);
+        ddd($read);
+
         $source = $object->config('controller.dir.data') . 'index.php';
         $destination = $options['public'] . 'index.php';
         File::copy($source, $destination);
