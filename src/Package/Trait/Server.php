@@ -73,9 +73,25 @@ trait Server {
                 '#class' => 'System.Server'
             ];
             $response = $node->create($class, $node->role_system(), $record);
-            ddd($response);
-            //create a system.server record
-            //add system.server to system.config (relation)
+            $config = $this->system_config($node);
+            if(
+                $config &&
+                is_array($config) &&
+                array_key_exists('node', $config) &&
+                is_object($config['node']) &&
+                property_exists($config['node'], 'server') &&
+                !empty($config['node']->server) &&
+                $response &&
+                is_array($response) &&
+                array_key_exists('node', $response) &&
+                is_object($response['node']) &&
+                property_exists($response['node'], 'public') &&
+                !empty($response['node']->public) &&
+                Dir::is($response['node']->public)
+            ){
+                echo 'Server public directory (' . $response['node']->public .') configured (create)' . PHP_EOL;
+                return;
+            }
         }
         elseif(
             is_array($response) &&
@@ -83,30 +99,50 @@ trait Server {
             is_object($response['node']) &&
             property_exists($response['node'], 'uuid')
         ){
-            $config = $node->record('System.Config', $node->role_system());
+            $config = $this->system_config($node);
+            $record = (object) [
+                'uuid' => $response['node']->uuid,
+                'public' => $options['public'],
+                '#class' => 'System.Server'
+            ];
+            $response = $node->patch($class, $node->role_system(), $record);
             if(
                 $config &&
                 is_array($config) &&
                 array_key_exists('node', $config) &&
-                property_exists($config['node'], 'uuid') &&
-                !property_exists($config['node'], 'server')
+                is_object($config['node']) &&
+                property_exists($config['node'], 'server') &&
+                !empty($config['node']->server) &&
+                $response &&
+                is_array($response) &&
+                array_key_exists('node', $response) &&
+                is_object($response['node']) &&
+                property_exists($response['node'], 'public') &&
+                !empty($response['node']->public) &&
+                Dir::is($response['node']->public)
             ){
-                $patch = (object) [
-                    'uuid' => $config['node']->uuid,
-                    'server' => '*' //we have $response and can use the uuid too.
-                ];
-                $config = $node->patch('System.Config', $node->role_system(), $patch);
+                echo 'Server public directory (' . $response['node']->public .') configured (patch)' . PHP_EOL;
+                return;
             }
-            d($config);
-            ddd($response);
-            //update system.server record
-            //add system.server to system.config (relation)
         }
+        throw new Exception('Server public directory (' . $options['public'] .') not configured...');
+    }
 
-
-        ddd($response);
-
-        //select server
-        //update server.public && server.public_directory
+    public function system_config($node){
+        $config = $node->record('System.Config', $node->role_system());
+        if(
+            $config &&
+            is_array($config) &&
+            array_key_exists('node', $config) &&
+            property_exists($config['node'], 'uuid') &&
+            !property_exists($config['node'], 'server')
+        ){
+            $patch = (object) [
+                'uuid' => $config['node']->uuid,
+                'server' => '*' //we have $response and can use the uuid too.
+            ];
+            $config = $node->patch('System.Config', $node->role_system(), $patch);
+        }
+        return$config;
     }
 }
