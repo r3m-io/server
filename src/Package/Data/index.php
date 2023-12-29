@@ -22,7 +22,6 @@ $dir_vendor =
 
 $autoload = $dir_vendor . 'autoload.php';
 $autoload = require $autoload;
-
 try {
     $config = new Config(
         [
