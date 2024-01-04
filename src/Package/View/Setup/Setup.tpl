@@ -6,5 +6,5 @@
 {{if(is.empty($options.public))}}
 {{$options.public = config('server.public')}}
 {{/if}}
-{{Package.R3m.Io.Server:Server:public.create($options)}}
+{{Package.R3m.Io.Server:Main:public.create($options)}}
 {{/if}}
