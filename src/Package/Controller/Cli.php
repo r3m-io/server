@@ -215,6 +215,9 @@ class Cli extends Controller {
         }
     }
 
+    /**
+     * @throws Exception
+     */
     private static function scan(App $object): array
     {
         $scan = [
@@ -225,7 +228,7 @@ class Cli extends Controller {
             'action' => [],
             'subaction' => []
         ];
-        $url = $object->config('controller.dir.view');
+        $url = (string) $object->config('controller.dir.view');
         if(!Dir::exist($url)){
             return $scan;
         }
