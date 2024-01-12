@@ -228,7 +228,7 @@ class Cli extends Controller {
             'action' => [],
             'subaction' => []
         ];
-        $url = (string) $object->config('controller.dir.view');
+        $url = $object->config('controller.dir.view');
         if(!Dir::exist($url)){
             return $scan;
         }
@@ -284,7 +284,7 @@ class Cli extends Controller {
             }
             if(array_key_exists(4, $explode) && $action === false){
                 $action = strtolower(File::basename($explode[4], $object->config('extension.tpl')));
-                $temp = explode('.', $subcommand, 2);
+                $temp = explode('.', $action, 2);
                 if(array_key_exists(1, $temp)){
                     $action = $temp[0];
                     $subaction = $temp[1];
