@@ -30,17 +30,8 @@ class Cli extends Controller {
      * @throws ObjectException
      * @throws Exception
      */
-    public static function run(App $object){
-        /*
-        $autoload = [];
-        $data = new Data();
-        $data->set('prefix', 'Node');
-        $data->set('directory', $object->config('project.dir.node'));
-        $autoload[] = clone $data->data();
-        $data->clear();
-        $data->set('autoload', $autoload);
-        Cli::autoload($object, $data);
-        */
+    public static function run(App $object): mixed
+    {
         $node = $object->request(0);
         $scan = Cli::scan($object);
         $module = $object->parameter($object, $node, 1);
