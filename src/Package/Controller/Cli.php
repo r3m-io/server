@@ -34,7 +34,7 @@ class Cli extends Controller {
     {
         $node = $object->request(0);
         $scan = Cli::scan($object);
-        $module = $object->parameter($object, $node, 1);
+        $module = (string) $object->parameter($object, $node, 1);
         if(
             !in_array(
                 $module,
@@ -44,7 +44,7 @@ class Cli extends Controller {
         ){
             $module = Cli::MODULE_INFO;
         }
-        $submodule = $object->parameter($object, $node, 2);
+        $submodule = (string) $object->parameter($object, $node, 2);
         if(
             !in_array(
                 $submodule,
@@ -54,7 +54,7 @@ class Cli extends Controller {
         ){
             $submodule = false;
         }
-        $command = $object->parameter($object, $node, 3);
+        $command = (string) $object->parameter($object, $node, 3);
         if(
             !in_array(
                 $command,
@@ -66,7 +66,7 @@ class Cli extends Controller {
         ){
             $command = false;
         }
-        $subcommand = $object->parameter($object, $node, 4);
+        $subcommand = (string) $object->parameter($object, $node, 4);
         if(
             !in_array(
                 $subcommand,
@@ -79,7 +79,7 @@ class Cli extends Controller {
         ){
             $subcommand = false;
         }
-        $action = $object->parameter($object, $node, 5);
+        $action = (string) $object->parameter($object, $node, 5);
         if(
             !in_array(
                 $action,
@@ -93,7 +93,7 @@ class Cli extends Controller {
         ){
             $action = false;
         }
-        $subaction = $object->parameter($object, $node, 6);
+        $subaction = (string) $object->parameter($object, $node, 6);
         if(
             !in_array(
                 $subaction,
