@@ -35,7 +35,13 @@ class Cli extends Controller {
         $node = $object->request(0);
         $scan = Cli::scan($object);
         $module = $object->parameter($object, $node, 1);
-        if(!in_array($module, $scan['module'])){
+        if(
+            !in_array(
+                $module,
+                $scan['module'],
+                true
+            )
+        ){
             $module = Cli::MODULE_INFO;
         }
         $submodule = $object->parameter($object, $node, 2);
