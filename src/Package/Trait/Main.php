@@ -202,6 +202,7 @@ trait Main {
 
     public function config_service($flags, $options){
         $object = $this->object();
+        ddd($object->config('project.dir'));
         $posix_id = 33;
         $url = $object->config('project.dir.temp') .
             $posix_id .
