@@ -213,9 +213,13 @@ trait Main {
             'Service' .
             $object->config('extension.json')
         ;
+
+
         $instance = App::instance();
+        d($instance->config('host'));
+        d($instance->config('domain'));
 
-
+        die;
 
 
         ddd($instance);
