@@ -199,4 +199,9 @@ trait Main {
         }
         return $config;
     }
+
+    public function config_service($flags, $options){
+        d($flags);
+        dd($options);
+    }
 }
