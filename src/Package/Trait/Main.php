@@ -202,9 +202,8 @@ trait Main {
 
     public function config_service($flags, $options){
         $object = $this->object();
-        ddd($object->config('framework.dir'));
         $posix_id = 33;
-        $url = $object->config('project.dir.temp') .
+        $url = $object->config('framework.dir.temp') .
             $posix_id .
             $object->config('ds') .
             'Config' .
