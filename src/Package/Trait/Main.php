@@ -214,6 +214,10 @@ trait Main {
             $object->config('extension.json')
         ;
         $instance = App::instance();
+
+
+
+
         ddd($instance);
 
         d($url);
