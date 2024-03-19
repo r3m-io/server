@@ -3,7 +3,7 @@
         "Server": {
             "Url": {
                 "count": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -15,7 +15,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -29,7 +29,7 @@
                     ]
                 },
                 "list": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -41,7 +41,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -55,7 +55,7 @@
                     ]
                 },
                 "page": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -67,7 +67,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -81,7 +81,7 @@
                     ]
                 },
                 "read": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -93,7 +93,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -107,7 +107,7 @@
                     ]
                 },
                 "record": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -119,7 +119,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -133,7 +133,7 @@
                     ]
                 },
                 "create": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -145,7 +145,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -159,7 +159,7 @@
                     ]
                 },
                 "create_many": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -171,7 +171,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -185,7 +185,7 @@
                     ]
                 },
                 "put": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -197,7 +197,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -211,7 +211,7 @@
                     ]
                 },
                 "put_many": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -223,7 +223,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -237,7 +237,7 @@
                     ]
                 },
                 "patch": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -249,7 +249,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",
@@ -263,7 +263,7 @@
                     ]
                 },
                 "patch_many": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -275,7 +275,7 @@
                             "object": {
                                 "options": {
                                     "multiple": false,
-                                    "expose": [
+                                    "output": [
                                         "development",
                                         "staging",
                                         "production",

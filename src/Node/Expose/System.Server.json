@@ -2,7 +2,7 @@
     "System": {
         "Server": {
             "count": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -20,7 +20,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -29,13 +29,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -48,7 +48,7 @@
                 ]
             },
             "page": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -66,7 +66,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -75,13 +75,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -94,7 +94,7 @@
                 ]
             },
             "list": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -112,7 +112,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -121,13 +121,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -140,7 +140,7 @@
                 ]
             },
             "read": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -158,7 +158,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -167,13 +167,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -186,7 +186,7 @@
                 ]
             },
             "record": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -204,7 +204,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -213,13 +213,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -232,7 +232,7 @@
                 ]
             },
             "create": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -250,7 +250,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -259,13 +259,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -278,7 +278,7 @@
                 ]
             },
             "create_many": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -296,7 +296,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -305,13 +305,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -324,7 +324,7 @@
                 ]
             },
             "put": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -342,7 +342,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -351,13 +351,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -370,7 +370,7 @@
                 ]
             },
             "put_many": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -388,7 +388,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -397,13 +397,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -416,7 +416,7 @@
                 ]
             },
             "patch": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -434,7 +434,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -443,13 +443,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],
@@ -462,7 +462,7 @@
                 ]
             },
             "patch_many": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -480,7 +480,7 @@
                         "object": {
                             "email": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "to",
                                     "cc",
                                     "bcc",
@@ -489,13 +489,13 @@
                             },
                             "site": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "disabled"
                                 ]
                             },
                             "http": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "upgrade_insecure",
                                     "cookie"
                                 ],

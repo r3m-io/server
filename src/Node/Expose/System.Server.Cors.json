@@ -3,7 +3,7 @@
         "Server": {
             "Cors": {
                 "count": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -18,8 +18,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -28,7 +28,7 @@
                     ]
                 },
                 "page": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -43,8 +43,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -53,7 +53,7 @@
                     ]
                 },
                 "list": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -68,8 +68,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -78,7 +78,7 @@
                     ]
                 },
                 "read": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -93,8 +93,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -103,7 +103,7 @@
                     ]
                 },
                 "record": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -118,8 +118,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -128,7 +128,7 @@
                     ]
                 },
                 "create": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -143,8 +143,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -153,7 +153,7 @@
                     ]
                 },
                 "create_many": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -168,8 +168,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -178,7 +178,7 @@
                     ]
                 },
                 "put": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -193,8 +193,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -203,7 +203,7 @@
                     ]
                 },
                 "put_many": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -218,8 +218,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -228,7 +228,7 @@
                     ]
                 },
                 "patch": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -243,8 +243,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
@@ -253,7 +253,7 @@
                     ]
                 },
                 "patch_many": {
-                    "expose": [
+                    "output": [
                         {
                             "role": "ROLE_SYSTEM",
                             "property": [
@@ -268,8 +268,8 @@
                             "object": {
                                 "header": {
                                     "multiple": false,
-                                    "expose": [
-                                        "expose",
+                                    "output": [
+                                        "output",
                                         "allow"
                                     ]
                                 }
