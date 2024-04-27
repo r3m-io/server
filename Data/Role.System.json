@@ -84,6 +84,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Server:delete",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Server:public.create",
       "#class": "Account.Permission"
     },
@@ -168,6 +172,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Server:Cors:delete",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Server:Url:import",
       "#class": "Account.Permission"
     },
@@ -245,6 +253,10 @@
     },
     {
       "name": "System:Server:Url:rename",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Server:Url:delete",
       "#class": "Account.Permission"
     }
   ]
