@@ -19,7 +19,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -44,7 +44,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -69,7 +69,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -94,7 +94,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -119,7 +119,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -144,7 +144,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -169,7 +169,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -194,7 +194,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -219,7 +219,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -244,7 +244,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
@@ -269,7 +269,7 @@
                                 "header": {
                                     "multiple": false,
                                     "output": [
-                                        "output",
+                                        "expose",
                                         "allow"
                                     ]
                                 }
