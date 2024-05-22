@@ -28,7 +28,7 @@
             },
             {
                 "name": "max-age",
-                "type": "int"
+                "type": "integer"
             },
             {
                 "name": "method",
